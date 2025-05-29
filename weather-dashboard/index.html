@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Dashboard</h1>
+        
+        <div class="search-container">
+            <input type="text" id="city-input" placeholder="Enter city name...">
+            <button id="search-btn"><i class="fas fa-search"></i> Search</button>
+        </div>
+        
+        <div class="weather-display">
+            <div id="current-weather" class="hidden">
+                <h2>Current Weather</h2>
+                <div class="current-weather-content">
+                    <div class="main-info">
+                        <h3 id="current-city"></h3>
+                        <div class="temp-container">
+                            <span id="current-temp"></span>
+                            <img id="current-icon" src="" alt="Weather icon">
+                        </div>
+                        <p id="current-desc"></p>
+                    </div>
+                    <div class="details">
+                        <p><i class="fas fa-tint"></i> Humidity: <span id="current-humidity"></span>%</p>
+                        <p><i class="fas fa-wind"></i> Wind: <span id="current-wind"></span> m/s</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="forecast" class="hidden">
+                <h2>5-Day Forecast</h2>
+                <div class="forecast-container" id="forecast-container">
+                    <!-- Forecast cards will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
